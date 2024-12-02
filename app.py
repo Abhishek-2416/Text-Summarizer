@@ -128,3 +128,17 @@ summary = ' '.join(summary_sentences)
 # Print the original and summarized texts
 print("\nOriginal Text:\n", text)
 print("\nSummarized Text:\n", summary)
+
+
+#####################################################################################################################################################################
+
+"""The WordCloud is a popular visualization tool used to display the most frequent words in a text corpus. 
+Words that appear more frequently are displayed larger, giving an intuitive sense of word importance.
+Below is an explanation of how to use WordCloud in Python, along with a code example."""
+
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(word_frequency)
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.savefig("wordcloud_output.png")
+
